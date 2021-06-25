@@ -1,0 +1,49 @@
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# easier to read disk
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+
+mki() {
+  mkdir $1 && cd $1/
+}
+
+alias ..="cd ../"
+alias ...="cd ../../"
+
+alias c="clear"
+
+alias ll="exa -la --git --group-directories-first"
+alias la="exa -la --git --group-directories-first"
+alias ls="exa -la --git --group-directories-first"
+alias rmi="rm -Rf"
+
+alias protoezy="cd ~/Code/react/sourcetronics.git/release-1"
+
+#npm specific commands
+alias start="yarn start"
+alias dev="yarn dev"
+alias build="yarn build"
+
+alias zsource="source $ZDOTDIR/.zshrc"
+
+alias gp="git push"
+alias gcsm="git commit -m"
+alias gaa="git add ."
+alias gss="git status"
+
+# ssh Specific
+alias lightsail="ssh ubuntu@35.154.170.51"
+alias liveserver="ssh ubuntu@3.7.223.218"
+
+alias update='sudo apt update && sudo apt upgrade'
