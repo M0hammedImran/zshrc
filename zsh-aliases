@@ -46,4 +46,4 @@ alias gss="git status"
 alias lightsail="ssh ubuntu@35.154.170.51"
 alias liveserver="ssh ubuntu@3.7.223.218"
 
-alias update='sudo apt update && sudo apt upgrade'
+alias update='sudo pacman -Syyu'
