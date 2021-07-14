@@ -14,6 +14,8 @@ alias rm='rm -i'
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 
+alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
+
 mki() {
   mkdir $1 && cd $1/
 }
