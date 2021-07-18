@@ -2,8 +2,8 @@
 source ~/.config/zsh/.zprofile #.zshenv stuff
 
 # some useful options (man zshoptions)
-setopt autocd extendedglob nomatch menucomplete
-setopt interactive_comments
+#setopt autocd extendedglob nomatch menucomplete
+#setopt interactive_comments
 #stty stop undef		# Disable ctrl-s to freeze terminal.
 zle_highlight=('paste:none')
 
@@ -58,8 +58,8 @@ zsh_add_file "zsh-exports"
 zsh_add_file "zsh-aliases"
 
 # Plugins
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+#zsh_add_plugin "zsh-users/zsh-autosuggestions"
+#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 #zsh_add_plugin "chrisands/zsh-yarn-completions"
 
 zsh_add_completion "M0hammedImran/docker-completions"
