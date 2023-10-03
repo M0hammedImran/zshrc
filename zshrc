@@ -1,5 +1,11 @@
 # Basic stff
 source ~/.config/zsh/.zprofile #.zshenv stuff
+bindkey -e
+bindkey \^u backward-kill-line
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[Od" backward-word
+bindkey "^[Oc" forward-word
 
 # some useful options (man zshoptions)
 #setopt autocd extendedglob nomatch menucomplete
@@ -27,21 +33,6 @@ RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%f'
 zstyle ':vcs_info:*' enable git
 
-# Prompt Settings
-declare -a PROMPTS
-PROMPTS=(
-	""
-	""
-	""
-	""
-	""
-	""
-	)
-#Randomize Formula:
-RANDOM=$$$(date +%s)
-ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}]}
-NEWLINE=$'\n'
-PROMPT='%F{blue}%1~%f${NEWLINE}%F{magenta}[%T]%f %F{cyan}$ignition%f '
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -58,9 +49,9 @@ zsh_add_file "zsh-exports"
 zsh_add_file "zsh-aliases"
 
 # Plugins
-#zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
 #zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 #zsh_add_plugin "chrisands/zsh-yarn-completions"
 
 zsh_add_completion "M0hammedImran/docker-completions"
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"

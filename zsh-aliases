@@ -24,29 +24,24 @@ alias ..="cd ../"
 alias ...="cd ../../"
 
 alias c="clear"
+alias clar="clear"
+alias clare="clear"
+alias clrae="clear"
+alias clrea="clear"
+alias clr="clear"
 
 alias ll="exa -la --git --group-directories-first"
 alias la="exa -la --git --group-directories-first"
 alias ls="exa -la --git --group-directories-first"
 alias rmi="rm -Rf"
 
-alias protoezy="cd ~/Code/react/protoezy.git/release-1"
-alias turnkey="cd ~/Code/react/protoezy.git/turnkey"
-
-#npm specific commands
-alias start="yarn start"
-alias dev="yarn dev"
-alias build="yarn build"
-
 alias zsource="source $ZDOTDIR/.zshrc"
 
 alias gp="git push"
-alias gcsm="git commit -m"
+alias gcm="git commit -m"
+alias gcsm="git commit -S -m"
 alias gaa="git add ."
 alias gss="git status"
+alias vim="nvim"
 
-# ssh Specific
-alias lightsail="ssh ubuntu@35.154.170.51"
-alias liveserver="ssh ubuntu@3.7.223.218"
-
-alias update='sudo apt update && sudo apt upgrade'
+alias update='sudo apt update && sudo apt upgrade -y'
