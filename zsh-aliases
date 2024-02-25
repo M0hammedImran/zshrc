@@ -11,10 +11,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # easier to read disk
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-
-alias reset='cd ~; clear; source ~/.config/zsh/.zprofile'
+alias df='df -h'     # human-readable sizes
+alias free='free -m' # show sizes in MB
 
 mki() {
   mkdir $1 && cd $1/
@@ -34,6 +32,7 @@ alias ll="exa -la --git --group-directories-first"
 alias la="exa -la --git --group-directories-first"
 alias ls="exa -la --git --group-directories-first"
 alias rmi="rm -Rf"
+alias cat="bat"
 
 alias zsource="source $ZDOTDIR/.zshrc"
 

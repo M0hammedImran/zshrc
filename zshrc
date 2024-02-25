@@ -50,8 +50,7 @@ zsh_add_file "zsh-aliases"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-#zsh_add_plugin "chrisands/zsh-yarn-completions"
-
 zsh_add_completion "M0hammedImran/docker-completions"
-eval "$(starship init zsh)"
+
+# eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
