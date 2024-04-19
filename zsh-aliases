@@ -43,5 +43,6 @@ alias gcsm="git commit -S -m"
 alias gaa="git add ."
 alias gss="git status"
 alias vim="nvim"
+alias cat="bat"
 
 alias update='sudo apt update && sudo apt upgrade -y'
