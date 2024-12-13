@@ -14,3 +14,11 @@ eval "$(starship init zsh)"
 # set up autocomplete in zsh into the current shell
 #source <(kubectl completion zsh)
 eval "$(zoxide init --cmd cd zsh)"
+
+# pnpm
+export PNPM_HOME="/home/imran/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

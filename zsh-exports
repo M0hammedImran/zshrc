@@ -16,7 +16,9 @@ export BUN_INSTALL="$HOME/.bun"
 export GO_INSTALL="/usr/local/go"
 export CARGO_INSTALL="$HOME/.cargo"
 export NVIM_INSTALL="/opt/nvim"
+export GO_BIN="$HOME/go/bin"
 
 export GO_INSTALL="/usr/local/go"
-export PATH=$HOME/.local/bin:$CARGO_INSTALL/bin:$GO_INSTALL/bin:$GO_INSTALL/bin:$BUN_INSTALL/bin:$NVIM_INSTALL/bin:$PATH
+export PATH=$HOME/.local/bin:$CARGO_INSTALL/bin:$GO_INSTALL/bin:$GO_INSTALL/bin:$BUN_INSTALL/bin:$NVIM_INSTALL/bin:$GO_BIN:$PATH
+eval "$(starship init zsh)"
 export PATH=$PATH:/usr/local/go/bin
