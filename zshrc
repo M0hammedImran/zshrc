@@ -52,5 +52,19 @@ zsh_add_file "zsh-aliases"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_completion "M0hammedImran/docker-completions"
 
-# eval "$(starship init zsh)"
+# set up autocomplete in zsh into the current shell
+#source <(kubectl completion zsh)
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(starship init zsh)"
+
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/imran/.zsh/completions:"* ]]; then export FPATH="/Users/imran/.zsh/completions:$FPATH"; fi
+
+. "/Users/imran/.deno/env"
+. "$HOME/.cargo/env"
+. "/Users/imran/.deno/env"
+
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
