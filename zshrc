@@ -68,3 +68,9 @@ if [[ ":$FPATH:" != *":/Users/imran/.zsh/completions:"* ]]; then export FPATH="/
 # Initialize zsh completions (added by deno install script)
 autoload -Uz compinit
 compinit
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/imran/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/imran/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/imran/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/imran/google-cloud-sdk/completion.zsh.inc'; fi
