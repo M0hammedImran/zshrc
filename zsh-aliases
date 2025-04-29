@@ -31,10 +31,10 @@ alias cls="clear"
 alias cl="clear"
 alias clea="clear"
 
-alias l="exa -1A --git --group-directories-first --color=always --git-ignore"
-alias la="l -l --time-style="+%Y-%m-%d %H:%M" --no-permissions --octal-permissions"
+alias l="exa -la --git --group-directories-first --color=always --git-ignore"
+alias ll="l"
+alias la="l"
 alias ls="l"
-alias tree="l --tree"
 alias rmi="rm -Rf"
 
 alias gp="git push"
