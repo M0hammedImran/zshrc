@@ -13,9 +13,12 @@ export GO_INSTALL="/usr/local/go"
 export CARGO_INSTALL="$HOME/.cargo"
 export NVIM_INSTALL="/opt/nvim"
 export GO_BIN="$HOME/go/bin"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
 
 export GO_INSTALL="/usr/local/go"
-export PATH=$HOME/.local/bin:$CARGO_INSTALL/bin:$GO_INSTALL/bin:$GO_INSTALL/bin:$BUN_INSTALL/bin:$NVIM_INSTALL/bin:$GO_BIN:$PATH
+export PATH=$HOME/.local/bin:$CARGO_INSTALL/bin:$GO_INSTALL/bin:$GO_INSTALL/bin:$BUN_INSTALL/bin:$NVIM_INSTALL/bin:$GO_BIN:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                 # This loads nvm
