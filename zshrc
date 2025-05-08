@@ -51,7 +51,7 @@ zsh_add_file "zsh-secrets"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_completion "M0hammedImran/docker-completions"
+# zsh_add_completion "M0hammedImran/docker-completions"
 
 # set up autocomplete in zsh into the current shell
 #source <(kubectl completion zsh)
@@ -64,7 +64,6 @@ if [[ ":$FPATH:" != *":/Users/imran/.zsh/completions:"* ]]; then export FPATH="/
 
 . "/Users/imran/.deno/env"
 . "$HOME/.cargo/env"
-. "/Users/imran/.deno/env"
 
 # Initialize zsh completions (added by deno install script)
 autoload -Uz compinit
