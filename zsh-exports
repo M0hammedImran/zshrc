@@ -1,22 +1,21 @@
+export SSL_CERT_FILE=$(python3 -m certifi)
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 export MANWIDTH=999
 
 export TERM="xterm-256color"
 export HISTFILE=~/.config/zsh/.zsh_history
-export EDITOR='nvim'
-export BROWSER='firefox'
+export EDITOR='zed'
 export SHELL='/usr/bin/zsh'
 export LANG=en_US.UTF-8
 export BUN_INSTALL="$HOME/.bun"
-export GO_INSTALL="/usr/local/go"
 export CARGO_INSTALL="$HOME/.cargo"
 export NVIM_INSTALL="/opt/nvim"
 export GO_BIN="$HOME/go/bin"
-export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
-export GO_INSTALL="/usr/local/go"
 
-export PATH=$HOME/.local/bin:$CARGO_INSTALL/bin:$GO_INSTALL/bin:$GO_INSTALL/bin:$BUN_INSTALL/bin:$NVIM_INSTALL/bin:$GO_BIN:$PATH
+export MINICONDA_BIN="$HOME/miniconda3/bin"
+
+export PATH=$HOME/.local/bin:$CARGO_INSTALL/bin:$BUN_INSTALL/bin:$NVIM_INSTALL/bin:$GO_BIN:$MINICONDA_BIN:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                 # This loads nvm
