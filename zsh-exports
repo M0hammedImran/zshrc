@@ -14,7 +14,7 @@ export NVIM_INSTALL="/opt/nvim"
 export GO_BIN="$HOME/go/bin"
 
 export MINICONDA_BIN="$HOME/miniconda3/bin"
-
+export HOMEBREW_NO_ENV_HINTS=1
 export PATH=$HOME/.local/bin:$CARGO_INSTALL/bin:$BUN_INSTALL/bin:$NVIM_INSTALL/bin:$GO_BIN:$MINICONDA_BIN:$PATH
 
 export NVM_DIR="$HOME/.nvm"
