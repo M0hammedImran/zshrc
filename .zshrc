@@ -1,31 +1,20 @@
-source $ZDOTDIR/zshrc
+# ZSH Configuration Entry Point
+# =============================
 
-alias claude="/Users/imran/.claude/local/claude"
+# Set ZDOTDIR if not already set
+export ZDOTDIR="${ZDOTDIR:-$HOME/.config/zsh}"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/imran/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/imran/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/imran/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/imran/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# Helper function to source files if they exist
+function source_if_exists() {
+    [[ -f "$1" ]] && source "$1"
+}
 
-
-# pnpm
-export PNPM_HOME="/Users/imran/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# bun completions
-[ -s "/Users/imran/.bun/_bun" ] && source "/Users/imran/.bun/_bun"
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+# Load configuration modules in order
+source_if_exists "$ZDOTDIR/exports.zsh"     # Environment variables
+source_if_exists "$ZDOTDIR/options.zsh"     # Shell options, keybindings, completions
+source_if_exists "$ZDOTDIR/functions.zsh"   # Helper functions
+source_if_exists "$ZDOTDIR/aliases.zsh"     # Aliases
+source_if_exists "$ZDOTDIR/prompt.zsh"      # Prompt configuration
+source_if_exists "$ZDOTDIR/plugins.zsh"     # Plugin management
+source_if_exists "$ZDOTDIR/tools.zsh"       # External tool integrations
+source_if_exists "$ZDOTDIR/secrets.zsh"     # Private tokens/keys (gitignored)

@@ -1,5 +1,15 @@
+# Completion cache
 .zcompdump
-plugins
+.zcompcache/
+
+# History
 .zsh_history
-zsh-secrets
-.zcompcache/**
+
+# Secrets (API keys, tokens)
+secrets.zsh
+
+# Plugins (can be re-downloaded)
+plugins/
+
+# macOS
+.DS_Store
