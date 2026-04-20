@@ -2,13 +2,7 @@
 # External Tools Integration
 # =============================================================================
 
-# -----------------------------------------------------------------------------
-# Homebrew
-# -----------------------------------------------------------------------------
-if [[ -f /opt/homebrew/bin/brew ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-export HOMEBREW_NO_ENV_HINTS=1
+# Note: Homebrew is initialized in exports.zsh before PATH setup
 
 # -----------------------------------------------------------------------------
 # Zoxide (smart cd)
@@ -77,7 +71,10 @@ fi
 # -----------------------------------------------------------------------------
 [[ -f "$HOME/.orbstack/shell/init.zsh" ]] && source "$HOME/.orbstack/shell/init.zsh" 2>/dev/null
 
+
 # -----------------------------------------------------------------------------
-# Claude CLI
+# Final PATH Setup (must come LAST after all tools that modify PATH)
 # -----------------------------------------------------------------------------
-[[ -x "$HOME/.claude/local/claude" ]] && alias claude="$HOME/.claude/local/claude"
+# Re-add custom paths that may have been overwritten by tool initializations
+# Using direct PATH manipulation since many tools use export PATH= which breaks the zsh path array
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.bun/bin:/opt/nvim/bin:$HOME/go/bin:$HOME/miniconda3/bin:$HOME/Library/pnpm:/opt/homebrew/opt/libpq/bin:$PATH"

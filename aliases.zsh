@@ -80,4 +80,3 @@ alias zsh-update-plugins="find \"\$ZDOTDIR/plugins\" -type d -exec test -e '{}/.
 # -----------------------------------------------------------------------------
 # Utilities
 # -----------------------------------------------------------------------------
-alias claude="$HOME/.claude/local/claude"

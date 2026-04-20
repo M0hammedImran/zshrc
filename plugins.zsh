@@ -79,5 +79,5 @@ function zsh_list_plugins() {
 # ─────────────────────────────────────────────────────────────
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-# zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-# zsh_add_completion "zsh-users/zsh-completions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_completion "zsh-users/zsh-completions"

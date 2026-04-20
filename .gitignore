@@ -4,6 +4,7 @@
 
 # History
 .zsh_history
+.zsh_sessions
 
 # Secrets (API keys, tokens)
 secrets.zsh
