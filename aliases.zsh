@@ -76,7 +76,7 @@ alias gur="git pull --no-rebase"
 # -----------------------------------------------------------------------------
 alias zsource="source \$ZDOTDIR/.zshrc"
 alias zsh-update-plugins="find \"\$ZDOTDIR/plugins\" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-
+alias cc="claude --dangerously-skip-permissions"
 # -----------------------------------------------------------------------------
 # Utilities
 # -----------------------------------------------------------------------------
