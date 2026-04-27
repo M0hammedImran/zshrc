@@ -12,7 +12,6 @@ alias rm="rm -i"
 
 # Use rsync with progress for copying/moving
 alias cp="rsync -ah --progress"
-alias mv="rsync -ah --progress --remove-source-files"
 
 # -----------------------------------------------------------------------------
 # Navigation
@@ -24,7 +23,7 @@ alias ....="cd ../../../"
 # -----------------------------------------------------------------------------
 # Directory Listing (using exa)
 # -----------------------------------------------------------------------------
-alias l="exa -la --git --group-directories-first --color=always --git-ignore"
+alias l="exa -la --git --group-directories-first --color=always"
 alias ll="l"
 alias la="l"
 alias ls="l"

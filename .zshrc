@@ -33,8 +33,5 @@ _zb_path_append /opt/zerobrew/prefix/bin
 # bun completions
 [ -s "/Users/imran/.bun/_bun" ] && source "/Users/imran/.bun/_bun"
 
-# opencode
-export PATH=/Users/imran/.opencode/bin:$PATH
-
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.vite-plus/env"
