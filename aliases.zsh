@@ -76,6 +76,29 @@ alias gur="git pull --no-rebase"
 alias zsource="source \$ZDOTDIR/.zshrc"
 alias zsh-update-plugins="find \"\$ZDOTDIR/plugins\" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias cc="claude --dangerously-skip-permissions"
+
+# -----------------------------------------------------------------------------
+# Claude Code
+# -----------------------------------------------------------------------------
+# Claudex: Claude Code backed by GPT (gpt-5.6-sol) via local VibeProxy
+# Requires VibeProxy running on localhost:8317 (menu-bar status green)
+alias claudex='ANTHROPIC_BASE_URL=http://localhost:8317 \
+ANTHROPIC_AUTH_TOKEN=dummy-not-used \
+ANTHROPIC_API_KEY= \
+CLAUDE_CODE_SUBAGENT_MODEL=gpt-5.6-sol \
+CLAUDE_CODE_ALWAYS_ENABLE_EFFORT=1 \
+CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY=3 \
+ENABLE_TOOL_SEARCH=false \
+claude --model gpt-5.6-sol --dangerously-skip-permissions'
+
+alias cimi='ANTHROPIC_BASE_URL=http://localhost:8317 \
+ANTHROPIC_AUTH_TOKEN=dummy-not-used \
+ANTHROPIC_API_KEY= \
+CLAUDE_CODE_SUBAGENT_MODEL=kimi-k3 \
+CLAUDE_CODE_ALWAYS_ENABLE_EFFORT=1 \
+CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY=3 \
+ENABLE_TOOL_SEARCH=false \
+claude --model kimi-k3 --dangerously-skip-permissions'
 # -----------------------------------------------------------------------------
 # Utilities
 # -----------------------------------------------------------------------------
