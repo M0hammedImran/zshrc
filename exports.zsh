@@ -39,7 +39,6 @@ export HOMEBREW_NO_ENV_HINTS=1
 # Tool Installations
 # ─────────────────────────────────────────────────────────────────────────────
 
-export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="$HOME/Library/pnpm"
 
 # ─────────────────────────────────────────────────────────────────────────────
