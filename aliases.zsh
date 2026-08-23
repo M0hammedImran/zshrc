@@ -21,9 +21,9 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 
 # -----------------------------------------------------------------------------
-# Directory Listing (using exa)
+# Directory Listing (using eza)
 # -----------------------------------------------------------------------------
-alias l="exa -la --git --group-directories-first --color=always"
+alias l="eza -la --git --group-directories-first --color=always"
 alias ll="l"
 alias la="l"
 alias ls="l"
